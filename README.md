@@ -1,15 +1,15 @@
 # Maixpy
 some code for use k210 by Maixpy better
-##bin
+## bin
 固件
-##code
+## code
 一些代码
-##http
+## http
 测试http服务的代码
-##kflash_gui
+## kflash_gui
 下载固件用的
-##lib
+## lib
 一些代码的依赖库
-##md
+## md
 一些教程
 #
