@@ -1,4 +1,3 @@
-import utime,lcd,image
 from Maix import GPIO
 from Maix import FPIOA
 from machine import Timer
@@ -24,9 +23,10 @@ def timer_task(timer):
         num=0
 
 def timer_init():
-    from machine import Timer,PWM
-    tim = Timer(Timer.TIMER0, Timer.CHANNEL0, mode=Timer.MODE_PWM)
-    ch = PWM(tim, freq=10, duty=50, pin=14)
+    from machine import Timer
+    tm = Timer(Timer.TIMER0, Timer.CHANNEL0, \
+    mode=Timer.MODE_PERIODIC, period=1000, \
+    callback=timer_task, start=True,priority=1, div=0)
 timer_init()
 while(True):
     pass
